@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GP Lead Hunter | Guitar Priest Tec</title>
+<style>
+:root{--navy:#101c31;--navy2:#172842;--blue:#6aa9ff;--bg:#f3f6fb;--ink:#182235;--muted:#728097;--line:#e4eaf2;--white:#fff;--green:#16866a;--amber:#a66a00;--red:#b43b4b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{display:grid;grid-template-columns:245px minmax(0,1fr);min-height:100vh}.sidebar{background:var(--navy);color:#eaf1fb;padding:24px 16px;display:flex;flex-direction:column;gap:26px}.brand{display:flex;align-items:center;gap:11px;padding:0 8px}.logo{width:39px;height:39px;border-radius:12px;background:linear-gradient(145deg,#8ac0ff,#3d78d4);display:grid;place-items:center;color:#0d1c34;font-weight:900}.brand strong{display:block;font-size:14px;letter-spacing:.7px}.brand small{color:#a9bad3;font-size:11px}.nav{display:grid;gap:6px}.nav button{border:0;background:transparent;color:#c5d2e5;text-align:left;padding:12px 13px;border-radius:10px;display:flex;gap:12px;align-items:center;font-size:13px}.nav button.active,.nav button:hover{background:#243954;color:white}.nav .ico{width:20px;text-align:center;font-size:16px}.sidebar-note{margin-top:auto;border:1px solid #344762;border-radius:13px;padding:14px;color:#c5d2e5;font-size:12px;line-height:1.5}.sidebar-note b{color:white;display:block;margin-bottom:5px}.main{min-width:0}.topbar{height:75px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;gap:20px}.crumb{font-size:12px;color:var(--muted)}.crumb b{color:var(--ink);font-size:15px;display:block;margin-top:3px}.top-actions{display:flex;align-items:center;gap:10px}.status{font-size:11px;color:#805c14;background:#fff5dc;border:1px solid #f3dfab;padding:7px 10px;border-radius:30px}.avatar{height:34px;width:34px;border-radius:50%;background:#e4efff;color:#244e87;display:grid;place-items:center;font-size:12px;font-weight:800}.content{padding:28px 30px;max-width:1500px;margin:auto}.page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:23px}.page-head h1{font-size:25px;margin:0 0 7px;letter-spacing:-.7px}.page-head p{margin:0;color:var(--muted);font-size:13px}.btn{border:1px solid var(--line);background:white;border-radius:9px;padding:10px 13px;color:#334057;font-weight:650;font-size:12px}.btn.primary{background:var(--navy2);border-color:var(--navy2);color:white}.btn.blue{background:#eaf3ff;border-color:#d5e6ff;color:#245a9f}.btn.danger{color:var(--red)}.btn:disabled{opacity:.5;cursor:not-allowed}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:20px}.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.stat-top{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px}.stat-icon{width:32px;height:32px;display:grid;place-items:center;background:#eef4fc;border-radius:10px;color:#396eb3}.stat strong{font-size:27px;display:block;margin:14px 0 4px;letter-spacing:-.8px}.stat small{font-size:11px;color:var(--muted)}.grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(260px,.85fr);gap:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:14px;min-width:0}.panel-head{padding:18px 19px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.panel-head h2{font-size:14px;margin:0}.panel-head p{font-size:11px;color:var(--muted);margin:5px 0 0}.panel-body{padding:18px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:13px}.field,.filters input,.filters select{border:1px solid var(--line);border-radius:8px;padding:10px 11px;background:#fff;color:var(--ink);font-size:12px;min-width:0}.filters input{flex:1;min-width:150px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:690px}th{text-align:left;font-size:10px;letter-spacing:.7px;text-transform:uppercase;color:#8793a6;padding:11px 12px;background:#f9fbfe;border-bottom:1px solid var(--line)}td{padding:13px 12px;border-bottom:1px solid #edf1f6;font-size:12px;vertical-align:middle}tbody tr:hover{background:#fbfdff}.company{font-weight:750;display:block;font-size:12px}.sub{display:block;color:var(--muted);font-size:10px;margin-top:4px}.pill{display:inline-block;border-radius:20px;padding:5px 8px;font-size:10px;font-weight:700;background:#edf2f8;color:#536278;white-space:nowrap}.pill.high{background:#e4f7ef;color:#167b5d}.pill.medium{background:#fff3d9;color:#966200}.pill.low{background:#f0f2f6;color:#657186}.pill.interested{background:#e8f2ff;color:#2d67a7}.row-actions{display:flex;gap:5px}.mini{border:1px solid var(--line);background:#fff;border-radius:7px;padding:6px 8px;font-size:10px;color:#43516a}.activity{display:grid;gap:16px}.activity-item{display:grid;grid-template-columns:30px 1fr;gap:10px}.activity-icon{width:30px;height:30px;border-radius:9px;background:#eff4fc;display:grid;place-items:center}.activity-item b{display:block;font-size:12px;margin:1px 0 4px}.activity-item p{font-size:11px;color:var(--muted);line-height:1.5;margin:0}.activity-item time{display:block;color:#9aa5b5;font-size:10px;margin-top:5px}.empty{padding:28px;text-align:center;color:var(--muted);font-size:12px}.hidden{display:none!important}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.form-group{display:grid;gap:6px}.form-group label{font-size:11px;color:#5e6b80;font-weight:700}.form-group input,.form-group select,.form-group textarea{border:1px solid var(--line);border-radius:9px;padding:11px;font-size:12px;width:100%;background:#fff}.form-group textarea{min-height:100px;resize:vertical}.span-2{grid-column:1/-1}.form-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:17px}.section-intro{margin-bottom:18px}.section-intro h2{font-size:17px;margin:0 0 6px}.section-intro p{font-size:12px;color:var(--muted);margin:0;line-height:1.5}.notice{border:1px solid #f0dfb4;background:#fff9e9;color:#775a20;padding:12px 14px;border-radius:10px;font-size:11px;line-height:1.55;margin-bottom:16px}.notice b{display:block;margin-bottom:3px}.pipeline{display:grid;grid-template-columns:repeat(5,minmax(100px,1fr));gap:10px}.stage{background:#f8fafd;border:1px solid var(--line);border-radius:11px;padding:13px}.stage h3{font-size:11px;margin:0 0 10px;color:#69778c}.stage strong{font-size:22px}.stage p{font-size:10px;color:var(--muted);margin:5px 0 0}.toast{position:fixed;right:20px;bottom:20px;background:#14243b;color:white;border-radius:10px;padding:12px 16px;font-size:12px;box-shadow:0 10px 30px #0b1b3028;z-index:50}.modal-backdrop{position:fixed;inset:0;background:#0a172c7a;display:grid;place-items:center;padding:16px;z-index:40}.modal{background:#fff;border-radius:15px;width:min(650px,100%);max-height:90vh;overflow:auto;box-shadow:0 25px 80px #07132640}.modal .panel-head{position:sticky;top:0;background:white;z-index:1}.footnote{font-size:10px;color:#8a96a8;line-height:1.5;margin-top:12px}.mobile-menu{display:none}
+@media(max-width:1000px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:1fr}.sidebar{width:210px}.shell{grid-template-columns:210px minmax(0,1fr)}.pipeline{grid-template-columns:repeat(3,minmax(100px,1fr))}}
+@media(max-width:700px){.shell{display:block}.sidebar{display:none}.topbar{height:65px;padding:0 16px}.content{padding:20px 14px}.page-head{align-items:flex-start}.page-head h1{font-size:22px}.top-actions .status{display:none}.stats{gap:9px}.stat{padding:13px}.stat strong{font-size:23px}.stat-top{font-size:10px}.stat-icon{width:27px;height:27px}.panel-head{padding:14px}.panel-body{padding:13px}.grid{gap:13px}.pipeline{grid-template-columns:repeat(2,minmax(0,1fr))}.form-grid{grid-template-columns:1fr}.span-2{grid-column:auto}.top-actions .btn{padding:8px;font-size:10px}.page-head .btn{font-size:10px;padding:9px}.mobile-menu{display:inline-flex}.crumb{font-size:10px}.crumb b{font-size:13px}}
+.row-actions{flex-wrap:wrap}
+.ob-box{border:1px solid var(--line);border-radius:11px;padding:12px;background:#f8fafd;margin-bottom:12px;font-size:12px;line-height:1.55;word-break:break-word}
+.ob-box b{display:block;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.ob-warn{background:#fff5dc;border-color:#f3dfab;color:#805c14}.ob-warn b{color:#805c14}
+.ob-bad{background:#fdecee;border-color:#f3c6cc;color:var(--red)}.ob-bad b{color:var(--red)}
+.ob-check{display:flex;gap:10px;align-items:flex-start;font-size:12px;line-height:1.5;margin:14px 0}
+.ob-check input{width:22px;height:22px;flex:none;margin:0}
+.btn.wa{background:#128c4a;border-color:#128c4a;color:#fff}
+.ob-actions,.ob-status{display:flex;flex-wrap:wrap;gap:8px}
+.ob-actions .btn,.ob-status .btn{min-height:44px}
+.ob-status .btn.on{background:var(--navy2);border-color:var(--navy2);color:#fff}
+.ob-select{width:100%;margin-top:8px;min-height:42px;border:1px solid var(--line);border-radius:9px;padding:8px;background:#fff}
+.ob-track{margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:11px;background:#f8fafd;font-size:12px}
+.ob-track b{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:4px}
+.mini{min-height:34px}
+.badge{display:inline-block;border-radius:6px;padding:2px 6px;font-size:9px;font-weight:800;letter-spacing:.4px;margin-left:6px;vertical-align:middle}
+.badge.demo{background:#eceff4;color:#5d6a80}.badge.unv{background:#fff3d9;color:#966200}.badge.ver{background:#e4f7ef;color:#167b5d}
+.bnav{display:none}
+@media(max-width:700px){.bnav{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--navy);padding:0 0 env(safe-area-inset-bottom)}.bnav button{flex-direction:column;justify-content:center;align-items:center;gap:2px;padding:8px 0;font-size:10px;text-align:center;border-radius:0;min-height:54px}.content{padding-bottom:96px}.toast{left:14px;right:14px;bottom:76px}input,select,textarea{font-size:16px}.filters{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+ <div class="brand"><div class="logo">GP</div><div><strong>GP LEAD HUNTER</strong><small>Guitar Priest Tec</small></div></div>
+ <nav class="nav" id="nav">
+  <button class="active" data-page="dashboard"><span class="ico">▦</span>Dashboard</button>
+  <button data-page="leads"><span class="ico">◎</span>Lead database</button>
+  <button data-page="discover"><span class="ico">⌕</span>Find companies</button>
+  <button data-page="messages"><span class="ico">✉</span>Message drafts</button>
+  <button data-page="followups"><span class="ico">◷</span>Follow-ups</button>
+  <button data-page="settings"><span class="ico">⚙</span>Settings</button>
+ </nav>
+ <div class="sidebar-note"><b>Built for real leads</b>Any industry. Research first, record every source, and personalize each approach.</div>
+</aside>
+<main class="main">
+ <header class="topbar"><div class="crumb"><span>Guitar Priest Tec / Sales workspace</span><b id="topTitle">Dashboard overview</b></div><div class="top-actions"><span class="status">● Integrations not connected</span><button class="btn" id="exportBtn">Export CSV</button><div class="avatar">GP</div></div></header>
+ <div class="content">
+  <section id="page-dashboard" class="page">
+   <div class="page-head"><div><h1>Good work starts with good leads.</h1><p>Find promising companies, understand their needs, and approach them with purpose.</p></div><button class="btn primary" data-goto="discover">＋ Find companies</button></div>
+   <div class="stats" id="stats"></div>
+   <div class="grid">
+    <div class="panel"><div class="panel-head"><div><h2>Recent leads</h2><p>Your latest prospects and their current status.</p></div><button class="btn" data-goto="leads">View all</button></div><div id="recentTable"></div></div>
+    <div class="panel"><div class="panel-head"><div><h2>Next actions</h2><p>Keep your sales process moving.</p></div></div><div class="panel-body"><div class="activity" id="activity"></div></div></div>
+   </div>
+   <div class="panel" style="margin-top:18px"><div class="panel-head"><div><h2>Sales pipeline</h2><p>Move each company forward as conversations develop.</p></div></div><div class="panel-body"><div class="pipeline" id="pipeline"></div></div></div>
+  </section>
+  <section id="page-leads" class="page hidden">
+   <div class="page-head"><div><h1>Lead database</h1><p>Keep verified company details and outreach history in one place.</p></div><div class="row-actions"><button class="btn" id="removeDemo">Remove demo records</button><button class="btn primary" id="addLeadBtn">＋ Add lead</button></div></div>
+   <div class="notice"><b>Data integrity matters</b>Leads are saved in this browser. Records marked DEMO are samples, not real companies. A lead only becomes VERIFIED after you record a source for each contact detail and tick the verified box.</div>
+   <div class="panel"><div class="panel-body"><div class="filters"><input id="leadSearch" placeholder="Search company, location, industry…"><select id="industryFilter"></select><select id="statusFilter"><option value="">All statuses</option><option>New</option><option>Researched</option><option>Qualified</option><option>Message Drafted</option><option>Approved</option><option>Contacted</option><option>Interested</option><option>Negotiating</option><option>Won</option><option>Lost</option><option>Do Not Contact</option></select><select id="typeFilter"><option value="">All records</option><option value="demo">Demo only</option><option value="unverified">Unverified</option><option value="verified">Verified</option></select><button class="btn" id="clearFilters">Reset</button></div></div><div id="leadsTable"></div></div>
+  </section>
+  <section id="page-discover" class="page hidden">
+   <div class="page-head"><div><h1>Find companies</h1><p>Set your target market and create a focused prospecting batch.</p></div></div>
+   <div id="discoveryPanel"></div>
+   <div class="panel"><div class="panel-head"><div><h2>Lead discovery criteria</h2><p>Choose who Guitar Priest Tec should approach first.</p></div></div><div class="panel-body"><form id="searchPlanForm"><div class="form-grid">
+    <div class="form-group"><label>Industry</label><select name="industry" id="planIndustry" required></select><input name="industryCustom" id="planCustom" class="hidden" placeholder="Type your industry" style="margin-top:6px"></div>
+    <div class="form-group"><label>Location</label><input name="location" value="Nigeria" required placeholder="e.g. Port Harcourt, Rivers State"></div>
+    <div class="form-group"><label>Number of companies to seek</label><select name="quantity"><option>25</option><option selected>50</option><option>100</option><option>200</option></select></div>
+    <div class="form-group"><label>Website opportunity</label><select name="opportunity"><option>No official website found</option><option>Website appears outdated</option><option>Broken or inaccessible website</option><option>Missing enquiry functionality</option><option>Any potential opportunity</option></select></div>
+    <div class="form-group span-2"><label>Additional research notes (optional)</label><textarea name="notes" placeholder="e.g. Prioritize established firms with a service portfolio and public business email."></textarea></div>
+   </div><div class="form-actions"><button class="btn primary" type="submit">Save search plan</button><button class="btn blue" type="button" id="runSearch" disabled>Search now</button></div></form></div></div>
+   <div class="panel" style="margin-top:18px"><div class="panel-head"><div><h2>Saved search plans</h2><p>Use these criteria when the live search provider is connected.</p></div></div><div id="plansList" class="panel-body"></div></div><div id="searchResults" style="margin-top:18px"></div>
+  </section>
+  <section id="page-messages" class="page hidden">
+   <div class="page-head"><div><h1>Message drafts</h1><p>Write personal, professional outreach. Review every message before sending.</p></div></div>
+   <div class="notice"><b>Approval-based by design</b>This app never sends anything. Opening WhatsApp or an email draft only pre-fills it, and you press Send yourself. The app cannot tell whether a message was sent, delivered or read, so you mark the result yourself.</div>
+   <div class="panel"><div class="panel-head"><div><h2>Create a personalized message</h2><p>Select a lead and generate an editable first draft.</p></div></div><div class="panel-body"><form id="messageForm"><div class="form-grid"><div class="form-group"><label>Company</label><select name="leadId" id="messageLeadSelect" required></select></div><div class="form-group"><label>Channel</label><select name="channel"><option>WhatsApp</option><option>Email</option></select></div><div class="form-group span-2"><label>Verified observation / reason for contact</label><textarea name="observation" placeholder="e.g. I couldn't locate an official website after checking the company's public profiles."></textarea></div><div class="form-group span-2 hidden" id="subjectGroup"><label>Email subject</label><input name="subject" id="messageSubject" placeholder="Email subject line"></div><div class="form-group span-2"><label>Message draft</label><textarea name="draft" id="messageDraft" placeholder="Your personalized message will appear here…" style="min-height:190px"></textarea></div></div><div class="form-actions"><button class="btn" type="button" id="generateMessage">Generate draft</button><button class="btn primary" type="submit">Save draft</button></div></form></div></div>
+   <div class="panel" style="margin-top:18px"><div class="panel-head"><div><h2>Saved drafts</h2><p>Copy, edit, or mark drafts as approved for your own workflow.</p></div></div><div id="draftsList"></div></div>
+  </section>
+  <section id="page-followups" class="page hidden">
+   <div class="page-head"><div><h1>Follow-ups</h1><p>Plan respectful follow-ups and keep every next action visible.</p></div><button class="btn primary" id="addFollowupBtn">＋ Add reminder</button></div>
+   <div class="notice"><b>Respect prospect preferences</b>Record opt-outs and stop outreach when someone declines or asks not to be contacted.</div>
+   <div class="panel"><div class="panel-head"><div><h2>Follow-up schedule</h2><p>Reminders saved in this browser.</p></div></div><div id="followupsList"></div></div>
+  </section>
+  <section id="page-settings" class="page hidden">
+   <div class="page-head"><div><h1>Settings</h1><p>Configure the business profile used in your lead research and outreach drafts.</p></div></div>
+   <div class="notice"><b>Security note</b>Never paste private API keys into this frontend. Production integrations should use secure server-side functions and restricted credentials.</div>
+   <div class="panel"><div class="panel-head"><div><h2>Business profile</h2><p>These details personalize generated message drafts.</p></div></div><div class="panel-body"><form id="settingsForm"><div class="form-grid"><div class="form-group"><label>Business name</label><input name="businessName" value="Guitar Priest Tec" required></div><div class="form-group"><label>Core service</label><input name="service" value="Professional website design and development" required></div><div class="form-group"><label>Target market</label><input name="market" value="Nigeria"></div><div class="form-group"><label>Contact name</label><input name="contactName" value="Isaac"></div><div class="form-group"><label>Business email</label><input name="email" type="email" value="guitarpriesttec@gmail.com"></div><div class="form-group"><label>Business phone</label><input name="phone" value="07077680686"></div><div class="form-group span-2"><label>Brand voice</label><select name="voice"><option>Professional, concise, confident</option><option>Warm and conversational</option><option>Formal corporate</option></select></div></div><div class="form-actions"><button class="btn primary" type="submit">Save settings</button></div></form></div></div>
+   <div class="panel" style="margin-top:18px"><div class="panel-head"><div><h2>Integrations status</h2><p>These services still need to be connected for live automation.</p></div></div><div class="panel-body" id="integrationStatus"></div></div>
+  </section>
+ </div>
+</main>
+</div>
+<nav class="nav bnav"><button class="active" data-page="dashboard"><span class="ico">▦</span>Home</button><button data-page="leads"><span class="ico">◎</span>Leads</button><button data-page="discover"><span class="ico">⌕</span>Find</button><button data-page="messages"><span class="ico">✉</span>Drafts</button><button data-page="followups"><span class="ico">◷</span>Follow-up</button><button data-page="settings"><span class="ico">⚙</span>Settings</button></nav><div id="modalRoot"></div><div id="toastRoot"></div>
+<script>
+const KEY='gpLeadHunter.v1';
+const seed={leads:[
+{id:'gp-001',name:'Sample Marine Survey Services',industry:'Marine & Maritime',location:'Port Harcourt, Rivers State',phone:'',email:'',website:'',opportunity:'No website verified yet',priority:'High',status:'New',notes:'DEMO RECORD — replace with a real, verified company.',created:new Date().toISOString(),nextAction:''},
+{id:'gp-002',name:'Sample Engineering & Projects Ltd',industry:'Engineering & Construction',location:'Benin City, Edo State',phone:'',email:'',website:'',opportunity:'Needs research',priority:'Medium',status:'Researched',notes:'DEMO RECORD — replace with a real, verified company.',created:new Date(Date.now()-86400000).toISOString(),nextAction:''},
+{id:'gp-003',name:'Sample Industrial Energy Services',industry:'Oil & Gas',location:'Lagos, Nigeria',phone:'',email:'',website:'',opportunity:'Needs research',priority:'Low',status:'New',notes:'DEMO RECORD — replace with a real, verified company.',created:new Date(Date.now()-172800000).toISOString(),nextAction:''}
+],plans:[],drafts:[],followups:[],settings:{businessName:'Guitar Priest Tec',service:'Professional website design and development',market:'Nigeria',contactName:'Isaac',email:'guitarpriesttec@gmail.com',phone:'07077680686',voice:'Professional, concise, confident'}};
+let db=load();let currentPage='dashboard';
+function migrate(d){d.leads.forEach(l=>{if(!l.origin)l.origin=(/^gp-00[123]$/.test(l.id)||/^DEMO RECORD/.test(l.notes||''))?'demo':'manual';if(l.verified===undefined)l.verified=false;if(!l.presence)l.presence='Not researched'});d.customIndustries=d.customIndustries||[];d.discovery=d.discovery||{url:'',ok:false};return d}
+function load(){try{let x=JSON.parse(localStorage.getItem(KEY));return migrate(x?{...structuredClone(seed),...x,settings:{...seed.settings,...(x.settings||{})}}:structuredClone(seed))}catch{return migrate(structuredClone(seed))}}
+function save(){localStorage.setItem(KEY,JSON.stringify(db));renderAll()}
+function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function toast(s){document.getElementById('toastRoot').innerHTML=`<div class="toast">${esc(s)}</div>`;setTimeout(()=>document.getElementById('toastRoot').innerHTML='',2600)}
+function go(page){currentPage=page;document.querySelectorAll('.page').forEach(x=>x.classList.add('hidden'));document.getElementById('page-'+page).classList.remove('hidden');document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===page));document.getElementById('topTitle').textContent=({dashboard:'Dashboard overview',leads:'Lead database',discover:'Find companies',messages:'Message drafts',followups:'Follow-up manager',settings:'Business settings'})[page];renderAll();window.scrollTo(0,0)}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.goto)));
+function pill(text){let cls=['High','Interested','Won'].includes(text)?(text==='High'?'high':'interested'):text==='Medium'?'medium':text==='Low'?'low':'';return `<span class="pill ${cls}">${esc(text||'—')}</span>`}
+function leadRow(l){return `<tr><td><span class="company">${esc(l.name)}${typeBadge(l)}</span><span class="sub">${esc(l.industry)}</span></td><td>${esc(l.location||'—')}</td><td>${pill(l.priority)}</td><td>${pill(l.status)}</td><td><div class="row-actions"><button class="mini" onclick="editLead('${l.id}')">Edit</button><button class="mini" onclick="draftFor('${l.id}')">Draft</button><button class="mini" onclick="openOutreach('${l.id}')">Outreach</button></div></td></tr>`}
+function table(leads){if(!leads.length)return '<div class="empty">No leads match this view yet.</div>';return `<div class="table-wrap"><table><thead><tr><th>Company</th><th>Location</th><th>Priority</th><th>Status</th><th>Actions</th></tr></thead><tbody>${leads.map(leadRow).join('')}</tbody></table></div>`}
+function renderStats(){let counts=[['Companies saved',db.leads.length,'▤'],['High priority',db.leads.filter(x=>x.priority==='High'&&x.status!=='Do Not Contact').length,'↗'],['Drafts to review',db.drafts.filter(x=>x.status!=='Approved').length,'✉'],['Interested prospects',db.leads.filter(x=>['Interested','Negotiating'].includes(x.status)).length,'◎']];document.getElementById('stats').innerHTML=counts.map(c=>`<div class="stat"><div class="stat-top">${c[0]}<span class="stat-icon">${c[2]}</span></div><strong>${c[1]}</strong><small>${c[0]==='Companies saved'?'Across your lead database':'Based on saved records'}</small></div>`).join('')}
+function renderDashboard(){renderStats();document.getElementById('recentTable').innerHTML=table([...db.leads].sort((a,b)=>new Date(b.created)-new Date(a.created)).slice(0,5));let acts=[];let unresearched=db.leads.filter(l=>l.status==='New').length;if(unresearched)acts.push(['🔎',`${unresearched} lead${unresearched===1?'':'s'} need research`,'Verify websites and company contact details before outreach.']);let drafts=db.drafts.filter(d=>d.status!=='Approved').length;if(drafts)acts.push(['✉',`${drafts} message draft${drafts===1?'':'s'} to review`,'Personalize and check every message before using it.']);let due=db.followups.filter(f=>f.date<=new Date().toISOString().slice(0,10)&&!f.done).length;if(due)acts.push(['◷',`${due} follow-up reminder${due===1?'':'s'} due`,'Review the conversation and choose an appropriate next action.']);if(!acts.length)acts.push(['✓','Workspace ready','Add verified prospects and create your first outreach draft.']);document.getElementById('activity').innerHTML=acts.map(a=>`<div class="activity-item"><div class="activity-icon">${a[0]}</div><div><b>${esc(a[1])}</b><p>${esc(a[2])}</p></div></div>`).join('');let stages=['New','Researched','Qualified','Contacted','Interested'];document.getElementById('pipeline').innerHTML=stages.map(s=>`<div class="stage"><h3>${s}</h3><strong>${db.leads.filter(l=>l.status===s).length}</strong><p>companies</p></div>`).join('')}
+function renderLeads(){let q=(document.getElementById('leadSearch')?.value||'').toLowerCase(),ind=document.getElementById('industryFilter')?.value||'',st=document.getElementById('statusFilter')?.value||'',ty=document.getElementById('typeFilter')?.value||'';let rows=db.leads.filter(l=>(!q||[l.name,l.location,l.industry,l.website].join(' ').toLowerCase().includes(q))&&(!ind||l.industry===ind)&&(!st||l.status===st)&&(!ty||leadKind(l)===ty));document.getElementById('leadsTable').innerHTML=table(rows)}
+function renderPlans(){let el=document.getElementById('plansList');if(!db.plans.length){el.innerHTML='<div class="empty">No saved search plans yet. Use the form above to save your first plan.</div>';return}el.innerHTML=db.plans.map((p,i)=>`<div style="padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px"><div><b style="font-size:12px">${esc(p.industry)} · ${esc(p.location)}</b><div class="sub">${esc(p.quantity)} companies · ${esc(p.opportunity)} · Saved ${esc(p.date)}</div>${p.notes?`<div class="sub">${esc(p.notes)}</div>`:''}</div><button class="mini" onclick="deletePlan(${i})">Delete</button></div>`).join('')}
+function renderLeadSelect(){let sel=document.getElementById('messageLeadSelect');if(!sel)return;let old=sel.value;sel.innerHTML='<option value="">Choose a company</option>'+db.leads.filter(l=>l.status!=='Do Not Contact').map(l=>`<option value="${l.id}">${esc(l.name)}${l.origin==='demo'?' (demo)':''}</option>`).join('');if(db.leads.some(l=>l.id===old))sel.value=old}
+function renderDrafts(){let el=document.getElementById('draftsList');if(!db.drafts.length){el.innerHTML='<div class="empty">No message drafts saved yet.</div>';return}el.innerHTML=db.drafts.map(d=>{let o=ob(d),wa=d.channel==='WhatsApp',em=d.channel==='Email';return `<div style="padding:16px 18px;border-bottom:1px solid var(--line)"><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap"><div><b style="font-size:12px">${esc(d.company)} · ${esc(d.channel)}</b><div class="sub">${esc(d.status)} · ${esc(d.date)}</div></div><div class="row-actions">${wa?`<button class="mini" onclick="openOutreach('${d.leadId}','${d.id}')">Open in WhatsApp</button><button class="mini" onclick="copyDraft('${d.id}')">Copy message</button>`:''}${em?`<button class="mini" onclick="openOutreach('${d.leadId}','${d.id}')">Open Email Draft</button><button class="mini" onclick="copyPart('${d.id}','subject')">Copy subject</button><button class="mini" onclick="copyDraft('${d.id}')">Copy body</button>`:''}${!wa&&!em?`<button class="mini" onclick="copyDraft('${d.id}')">Copy</button>`:''}<button class="mini" onclick="approveDraft('${d.id}')">Approve</button><button class="mini" onclick="deleteDraft('${d.id}')">Delete</button></div></div>${em&&d.subject?`<p style="font-size:12px;margin:12px 0 0"><b>Subject:</b> ${esc(d.subject)}</p>`:''}<p style="white-space:pre-wrap;font-size:12px;line-height:1.6;color:#46536a;margin:12px 0 0">${esc(d.text)}</p><div class="ob-track"><b>Outreach tracking (set by you)</b>${o.openedAt?`Opened in ${esc(o.openedVia||d.channel)} on ${esc(new Date(o.openedAt).toLocaleString())}. Not confirmed sent.`:'Not opened yet.'}<select class="ob-select" onchange="setOutreach('${d.id}',this.value)">${OB_STATUSES.map(x=>`<option ${o.status===x?'selected':''}>${x}</option>`).join('')}</select></div></div>`}).join('')}
+function renderFollowups(){let el=document.getElementById('followupsList');if(!db.followups.length){el.innerHTML='<div class="empty">No reminders scheduled. Add one when a prospect has agreed to a follow-up.</div>';return}el.innerHTML=[...db.followups].sort((a,b)=>a.date.localeCompare(b.date)).map(f=>`<div style="padding:14px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;align-items:center"><div><b style="font-size:12px">${esc(f.company)}</b><div class="sub">${esc(f.date)} · ${esc(f.note||'Follow up with prospect')}</div>${f.done?'<span class="pill high">Completed</span>':f.date<new Date().toISOString().slice(0,10)?'<span class="pill medium">Overdue</span>':''}</div><div class="row-actions"><button class="mini" onclick="toggleFollowup('${f.id}')">${f.done?'Reopen':'Complete'}</button><button class="mini" onclick="deleteFollowup('${f.id}')">Delete</button></div></div>`).join('')}
+function renderIntegrations(){document.getElementById('integrationStatus').innerHTML=[['Business discovery',db.discovery.ok?'Reachable (tested)':'Not connected','Needs your own secure backend and a permitted business-search provider'],['AI research and writing','Template mode','Requires AI API + secure backend function'],['Email outreach','Manual drafts','Opens your email app with the draft filled in. You press Send. Delivery is not tracked.'],['WhatsApp outreach','Manual drafts','Opens WhatsApp with the message filled in. You press Send. Delivery and reads are not tracked.'],['Persistent cloud database','Local browser only','Supabase project and secure policies not configured']].map(x=>`<div style="display:flex;justify-content:space-between;gap:15px;padding:12px 0;border-bottom:1px solid var(--line)"><div><b style="font-size:12px">${x[0]}</b><div class="sub">${x[2]}</div></div>${pill(x[1])}</div>`).join('')}
+function renderAll(){renderDashboard();if(document.getElementById('page-leads'))renderLeads();renderPlans();renderLeadSelect();renderDrafts();renderFollowups();renderIntegrations();renderIndustrySelects();renderDiscovery()}
+function openModal(title,body){document.getElementById('modalRoot').innerHTML=`<div class="modal-backdrop" id="backdrop"><div class="modal"><div class="panel-head"><h2>${title}</h2><button class="btn" onclick="closeModal()">Close</button></div><div class="panel-body">${body}</div></div></div>`;document.getElementById('backdrop').addEventListener('click',e=>{if(e.target.id==='backdrop')closeModal()})}function closeModal(){document.getElementById('modalRoot').innerHTML=''}
+function leadForm(l={}){let industries=allIndustries(l.industry),statuses=['New','Researched','Qualified','Message Drafted','Approved','Contacted','Interested','Negotiating','Won','Lost','Do Not Contact'];openModal(l.id?'Edit lead':'Add a lead',`<form id="leadForm"><div class="form-grid"><div class="form-group span-2"><label>Company name *</label><input name="name" required value="${esc(l.name||'')}"></div><div class="form-group"><label>Industry *</label><select name="industry" id="lfIndustry">${industries.map(x=>`<option ${l.industry===x?'selected':''}>${esc(x)}</option>`).join('')}<option value="__custom">Other (type your own)…</option></select><input name="industryCustom" id="lfCustom" class="hidden" placeholder="Type the industry" style="margin-top:6px"></div><div class="form-group"><label>Location</label><input name="location" value="${esc(l.location||'')}"></div><div class="form-group"><label>Business phone</label><input name="phone" inputmode="tel" value="${esc(l.phone||'')}" placeholder="e.g. 0803 123 4567 or +234 803 123 4567"></div><div class="form-group"><label>Business email</label><input name="email" type="email" value="${esc(l.email||'')}"></div><div class="form-group"><label>Where did the phone number come from?</label><input name="phoneSource" value="${esc(l.phoneSource||'')}" placeholder="e.g. Company website contact page"></div><div class="form-group"><label>Where did the email come from?</label><input name="emailSource" value="${esc(l.emailSource||'')}" placeholder="e.g. Official website or LinkedIn page"></div><div class="form-group"><label>Website URL</label><input name="website" value="${esc(l.website||'')}" placeholder="https://"></div><div class="form-group"><label>Where did the website come from?</label><input name="websiteSource" value="${esc(l.websiteSource||'')}" placeholder="e.g. Google Maps listing"></div><div class="form-group span-2"><label>What did you find online? (only what you checked)</label><select name="presence">${PRESENCE.map(x=>`<option ${(l.presence||'Not researched')===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="form-group"><label>Priority</label><select name="priority">${['High','Medium','Low'].map(x=>`<option ${l.priority===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="form-group"><label>Pipeline status</label><select name="status">${statuses.map(x=>`<option ${l.status===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="form-group span-2"><label>Verified website opportunity / notes</label><textarea name="notes">${esc(l.notes||'')}</textarea></div></div><label class="ob-check"><input type="checkbox" name="verified" ${l.verified?'checked':''} ${l.origin==='demo'?'disabled':''}><span>Mark as verified. I checked these details myself and recorded where each one came from.</span></label><div class="form-actions"><button class="btn" type="button" onclick="closeModal()">Cancel</button><button class="btn primary" type="submit">Save lead</button></div></form>`);wireLeadForm();document.getElementById('leadForm').onsubmit=e=>{e.preventDefault();let f=new FormData(e.target),v=Object.fromEntries(f.entries());v=prepLead(v,f,l);if(!v)return;if(l.id){Object.assign(db.leads.find(x=>x.id===l.id),v)}else db.leads.unshift({id:'gp-'+Date.now(),origin:'manual',...v,created:new Date().toISOString()});closeModal();save();toast('Lead saved'+(v.phone&&!normalizePhone(v.phone).ok?' — but the phone number doesn’t look valid':'')) }}
+function editLead(id){let l=db.leads.find(x=>x.id===id);if(l)leadForm(l)}function draftFor(id){go('messages');document.getElementById('messageLeadSelect').value=id;document.getElementById('messageDraft').value='';}
+document.getElementById('addLeadBtn').onclick=()=>leadForm();document.getElementById('leadSearch').addEventListener('input',renderLeads);document.getElementById('industryFilter').onchange=renderLeads;document.getElementById('statusFilter').onchange=renderLeads;document.getElementById('clearFilters').onclick=()=>{document.getElementById('leadSearch').value='';document.getElementById('industryFilter').value='';document.getElementById('statusFilter').value='';document.getElementById('typeFilter').value='';renderLeads()};
+document.getElementById('searchPlanForm').onsubmit=e=>{e.preventDefault();let p=Object.fromEntries(new FormData(e.target).entries());if(p.industry==='__custom'){p.industry=(p.industryCustom||'').trim()||'Other';if(!allIndustries().includes(p.industry))db.customIndustries.push(p.industry)}delete p.industryCustom;p.date=new Date().toLocaleDateString();db.plans.unshift(p);save();toast(db.discovery.ok?'Search plan saved.':'Search plan saved. Live search is not connected.')};function deletePlan(i){db.plans.splice(i,1);save();toast('Search plan deleted')}
+function generateText(){let f=document.getElementById('messageForm'),data=Object.fromEntries(new FormData(f).entries()),l=db.leads.find(x=>x.id===data.leadId);if(!l){toast('Choose a company first');return}if(l.status==='Do Not Contact'){toast('This lead is marked do-not-contact');return}let m=buildMessage(l,data.channel,data.observation);document.getElementById('messageDraft').value=m.body;if(data.channel==='Email')document.getElementById('messageSubject').value=m.subject}
+document.getElementById('generateMessage').onclick=generateText;document.getElementById('messageForm').onsubmit=e=>{e.preventDefault();let d=Object.fromEntries(new FormData(e.target).entries()),l=db.leads.find(x=>x.id===d.leadId);if(!l||!d.draft.trim()){toast('Choose a company and create a message first');return}db.drafts.unshift({id:'dr-'+Date.now(),leadId:l.id,company:l.name,channel:d.channel,subject:d.channel==='Email'?(d.subject||'').trim():'',text:d.draft.trim(),status:'Needs review',date:new Date().toLocaleDateString(),outreach:{status:'Not sent',openedAt:null,openedVia:null}});if(l.status==='New')l.status='Message Drafted';save();toast('Draft saved — not sent');e.target.reset();document.getElementById('messageDraft').value='';syncSubject()};
+async function copyDraft(id){let d=db.drafts.find(x=>x.id===id);if(!d)return;copyText(d.text,d.channel==='Email'?'Email body':'Message',true)}function approveDraft(id){let d=db.drafts.find(x=>x.id===id);if(d){d.status='Approved';let l=db.leads.find(x=>x.id===d.leadId);if(l&&l.status==='Message Drafted')l.status='Approved';save();toast('Marked approved. This does not send it.')}}function deleteDraft(id){db.drafts=db.drafts.filter(x=>x.id!==id);save();toast('Draft deleted')}
+document.getElementById('addFollowupBtn').onclick=()=>{let options=db.leads.map(l=>`<option value="${l.id}">${esc(l.name)}</option>`).join('');openModal('Add follow-up reminder',`<form id="followupForm"><div class="form-grid"><div class="form-group span-2"><label>Company</label><select name="leadId" required>${options}</select></div><div class="form-group"><label>Reminder date</label><input type="date" name="date" required value="${new Date(Date.now()+3*86400000).toISOString().slice(0,10)}"></div><div class="form-group"><label>Next action</label><select name="note"><option>Follow up on demo</option><option>Ask if they reviewed the proposal</option><option>Schedule a call</option><option>Check in on project timing</option><option>Other agreed next step</option></select></div></div><div class="form-actions"><button class="btn" type="button" onclick="closeModal()">Cancel</button><button class="btn primary">Save reminder</button></div></form>`);document.getElementById('followupForm').onsubmit=e=>{e.preventDefault();let v=Object.fromEntries(new FormData(e.target).entries()),l=db.leads.find(x=>x.id===v.leadId);db.followups.push({id:'fu-'+Date.now(),leadId:v.leadId,company:l?.name||'Unknown company',date:v.date,note:v.note,done:false});closeModal();save();toast('Reminder saved')}};function toggleFollowup(id){let f=db.followups.find(x=>x.id===id);if(f)f.done=!f.done;save()}function deleteFollowup(id){db.followups=db.followups.filter(x=>x.id!==id);save();toast('Reminder deleted')}
+document.getElementById('settingsForm').onsubmit=e=>{e.preventDefault();db.settings=Object.fromEntries(new FormData(e.target).entries());save();toast('Business profile saved')};
+function exportCSV(){let rows=[['Company','Industry','Location','Phone','Email','Website','Opportunity','Priority','Status','Notes','Phone source','Email source','Website source','Record type','Verified','Online presence'],...db.leads.map(l=>[l.name,l.industry,l.location,l.phone,l.email,l.website,l.opportunity,l.priority,l.status,l.notes,l.phoneSource,l.emailSource,l.websiteSource,leadKind(l),l.verified?'Yes':'No',l.presence])];let csv=rows.map(r=>r.map(v=>'"'+String(v||'').replace(/"/g,'""')+'"').join(',')).join('\r\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));a.download='gp-lead-hunter-leads.csv';a.click();URL.revokeObjectURL(a.href)}document.getElementById('exportBtn').onclick=exportCSV;
+/* ===== Outreach: WhatsApp / Email drafts, copy buttons, manual status tracking ===== */
+const OB_STATUSES=['Not sent','Contacted','Follow-up required','Interested','Not interested'];
+const LEAD_STATUSES=['New','Researched','Qualified','Message Drafted','Approved','Contacted','Interested','Negotiating','Won','Lost','Do Not Contact'];
+let OB=null;
+function ob(d){return d.outreach||{status:'Not sent',openedAt:null,openedVia:null}}
+function validEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(e||'').trim())}
+function normalizePhone(raw){
+ const bad=r=>({ok:false,reason:r});
+ let s=String(raw||'').trim();
+ if(!s)return bad('No phone number saved for this lead.');
+ if(/[a-z]/i.test(s))return bad('The phone number contains letters. Edit the lead and enter digits only.');
+ let hasPlus=s.startsWith('+'),d=s.replace(/\D/g,''),ng=null,note='';
+ if(!hasPlus&&d.startsWith('00')){hasPlus=true;d=d.slice(2)}
+ if(hasPlus){
+  if(d.startsWith('234'))ng=d.slice(3);
+  else if(d.length>=8&&d.length<=15)return{ok:true,e164:d,display:'+'+d,note:'This is not a Nigerian number. Check the country code is correct.'};
+  else return bad('This international number has the wrong length.');
+ }else if(d.startsWith('234')&&d.length>=13)ng=d.slice(3);
+ else if(d.length===11&&d[0]==='0')ng=d.slice(1);
+ else if(d.length===10&&/^[789]/.test(d)){ng=d;note='The leading 0 was missing, so this is treated as a Nigerian number.'}
+ else return bad('This doesn’t look like a Nigerian number. Use 11 digits starting with 0 (for example 0803 123 4567) or +234 followed by 10 digits.');
+ if(ng.length===11&&ng[0]==='0')ng=ng.slice(1);
+ if(!/^[789][01]\d{8}$/.test(ng))return bad('Nigerian mobile numbers have 10 digits after +234 and start with 70, 71, 80, 81, 90 or 91. This may be a landline or a typo, and WhatsApp needs a mobile number.');
+ return{ok:true,e164:'234'+ng,display:'+234 '+ng.slice(0,3)+' '+ng.slice(3,6)+' '+ng.slice(6),note};
+}
+function contactInfo(l,channel){
+ if(channel==='WhatsApp'){let p=normalizePhone(l.phone);return{...p,source:(l.phoneSource||'').trim()}}
+ let e=(l.email||'').trim();
+ return{ok:validEmail(e),display:e,to:e,reason:!e?'No email address saved for this lead.':'This email address doesn’t look valid. Edit the lead to fix it.',source:(l.emailSource||'').trim()};
+}
+function buildMessage(l,channel,obs){
+ let name=db.settings.contactName||'Isaac',biz=db.settings.businessName||'Guitar Priest Tec';obs=composeObs(l,(obs||'').trim());
+ if(channel==='Email')return{subject:`Website design for ${l.name}`,body:`Hello ${l.name} team,\n\nMy name is ${name}, and I’m reaching out from ${biz}. We help businesses with professional website design and development.\n\n${obs?obs+'\n\n':''}I thought it may be useful to introduce our services in case improving your company’s online presence is a current priority. If you’re open to it, I can share a short demo tailored to your business.\n\nWould that be useful?\n\nBest regards,\n${name}\n${biz}`};
+ return{subject:'',body:`Hello ${l.name} team, good day! My name is ${name} from ${biz}. We help companies build professional websites that present their services clearly and make it easier for potential clients to enquire.\n\n${obs?obs+'\n\n':''}I wanted to introduce our services in case a website upgrade or new website is something your company may be considering. I can share a short demo tailored to your business if you’re open to seeing one.\n\nWould you be interested?`};
+}
+async function copyText(text,label,showFallback){
+ if(!String(text||'').trim()){toast('Nothing to copy')}
+ else{
+  try{await navigator.clipboard.writeText(text);toast(label+' copied');return true}catch{}
+  try{let t=document.createElement('textarea');t.value=text;t.setAttribute('readonly','');t.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(t);t.select();t.setSelectionRange(0,t.value.length);let ok=document.execCommand('copy');t.remove();if(ok){toast(label+' copied');return true}}catch{}
+  if(showFallback)openModal('Copy '+esc(label.toLowerCase()),`<div class="form-group"><textarea readonly style="min-height:200px">${esc(text)}</textarea></div><p class="sub">Your browser blocked automatic copying. Press and hold inside the box, choose Select all, then Copy.</p>`);
+  else toast('Copy was blocked. Press and hold the text to copy it.');
+ }
+ return false;
+}
+function copyPart(id,part){let d=db.drafts.find(x=>x.id===id);if(!d)return;copyText(d[part]||'','Email subject',true)}
+function syncLeadStatus(leadId,obStatus){
+ let l=db.leads.find(x=>x.id===leadId);if(!l)return;let r=x=>LEAD_STATUSES.indexOf(x);
+ if(obStatus==='Contacted'&&r(l.status)<r('Contacted'))l.status='Contacted';
+ else if(obStatus==='Interested'&&r(l.status)<r('Interested'))l.status='Interested';
+ else if(obStatus==='Not interested'&&!['Won','Lost','Do Not Contact'].includes(l.status))l.status='Lost';
+}
+function setOutreach(id,status){
+ let d=db.drafts.find(x=>x.id===id);if(!d||!OB_STATUSES.includes(status))return;
+ d.outreach={...ob(d),status,updatedAt:new Date().toISOString()};
+ syncLeadStatus(d.leadId,status);save();
+ toast(status==='Follow-up required'?'Marked for follow-up. Add a reminder on the Follow-ups page.':'Marked as “'+status+'” (set by you)');
+}
+function outreachUrl(s,c){
+ if(s.channel==='WhatsApp')return 'https://wa.me/'+c.e164+'?text='+encodeURIComponent(s.text.trim());
+ return 'mailto:'+c.to+'?subject='+encodeURIComponent((s.subject||'').trim())+'&body='+encodeURIComponent(s.text.trim().replace(/\r?\n/g,'\r\n'));
+}
+function launchUrl(url,newTab){let a=document.createElement('a');a.href=url;if(newTab){a.target='_blank';a.rel='noopener noreferrer'}document.body.appendChild(a);a.click();a.remove()}
+function openOutreach(leadId,draftId){
+ let l=db.leads.find(x=>x.id===leadId);if(!l){toast('Lead not found');return}
+ if(l.status==='Do Not Contact'){toast('This lead is marked Do Not Contact');return}
+ if(l.origin==='demo'){toast('This is a demo record, not a real company.');return}
+ let d=draftId?db.drafts.find(x=>x.id===draftId):null,channel=d?d.channel:'WhatsApp';
+ let st={channel,obs:'',subject:d?(d.subject||''):'',text:d?d.text:'',draftId:d?d.id:null,approved:false};
+ if(!d){let m=buildMessage(l,channel,'');st.subject=m.subject;st.text=m.body}
+ else if(channel==='Email'&&!st.subject)st.subject=buildMessage(l,'Email','').subject;
+ OB={leadId,st};renderOutreach();
+}
+function trackHtml(){
+ let s=OB.st,d=s.draftId?db.drafts.find(x=>x.id===s.draftId):null;if(!d||!ob(d).openedAt)return '';
+ let o=ob(d),l=db.leads.find(x=>x.id===OB.leadId),c=contactInfo(l,s.channel),wa=s.channel==='WhatsApp';
+ return `<div class="ob-box ob-warn" style="margin-top:14px"><b>Opened, not confirmed</b>You opened ${wa?'WhatsApp':'your email app'} on ${esc(new Date(o.openedAt).toLocaleString())}. This app cannot tell whether you pressed Send, or whether anything was delivered or read. When you know what happened, mark the lead below.${c.ok?`<div style="margin-top:6px"><a href="${esc(outreachUrl(s,c))}" ${wa?'target="_blank" rel="noopener noreferrer"':''}>Didn’t open? Tap here to try again</a></div>`:''}</div><div class="ob-status">${OB_STATUSES.map(x=>`<button type="button" class="btn ${o.status===x?'on':''}" onclick="obMark('${x}')">${x}</button>`).join('')}</div><p class="sub" style="margin:8px 0 0">Current status: <b>${esc(o.status)}</b> (set by you)</p>`;
+}
+function renderOutreach(){
+ let s=OB.st,l=db.leads.find(x=>x.id===OB.leadId);if(!l){closeModal();return}
+ let wa=s.channel==='WhatsApp',c=contactInfo(l,s.channel),d=s.draftId?db.drafts.find(x=>x.id===s.draftId):null,h='';
+ h+=`<div class="ob-box ${c.ok?'':'ob-bad'}"><b>${wa?'WhatsApp number':'Email address'} for ${esc(l.name)}</b>${esc(c.ok?c.display:c.reason)}${c.ok&&c.note?`<div style="margin-top:4px">${esc(c.note)}</div>`:''}${c.ok?'':`<div style="margin-top:8px"><button type="button" class="btn" onclick="closeModal();editLead('${l.id}')">Edit lead</button></div>`}</div>`;
+ h+=`<div class="ob-box ${c.source?'':'ob-warn'}"><b>Where this contact came from</b>${c.source?esc(c.source):'No source recorded. Confirm this contact is genuine and belongs to this business before you send anything. Edit the lead to add the source.'}</div>`;
+ h+=leadWarnings(l);
+ if(!d){
+  h+=`<div class="form-group"><label>Channel</label><select id="obChannel"><option ${wa?'selected':''}>WhatsApp</option><option ${wa?'':'selected'}>Email</option></select></div><div class="form-group" style="margin-top:10px"><label>Verified observation (optional)</label><textarea id="obObs" placeholder="Only add something you have checked yourself.">${esc(s.obs)}</textarea></div><div style="margin:10px 0"><button type="button" class="btn" id="obRegen">Regenerate message</button></div>`;
+ }
+ if(!wa)h+=`<div class="form-group" style="margin-top:10px"><label>Email subject</label><input id="obSubject" value="${esc(s.subject)}"></div>`;
+ h+=`<div class="form-group" style="margin-top:10px"><label>${wa?'WhatsApp message':'Email body'}</label><textarea id="obText" style="min-height:200px">${esc(s.text)}</textarea></div>`;
+ h+=`<div class="ob-actions" style="margin-top:10px">${wa?'<button type="button" class="btn" id="obCopyMsg">Copy message</button>':'<button type="button" class="btn" id="obCopySub">Copy subject</button><button type="button" class="btn" id="obCopyBody">Copy body</button>'}</div>`;
+ h+=`<label class="ob-check"><input type="checkbox" id="obApprove" ${s.approved?'checked':''}><span>I have read this message and I approve opening it. Nothing is sent until I press Send myself in ${wa?'WhatsApp':'my email app'}.</span></label>`;
+ h+=`<div class="ob-actions"><button type="button" class="btn ${wa?'wa':'primary'}" id="obOpen" ${c.ok&&s.approved?'':'disabled'}>${wa?'Open in WhatsApp':'Open Email Draft'}</button><button type="button" class="btn" onclick="closeModal()">Close</button></div><div id="obTrack">${trackHtml()}</div>`;
+ openModal(esc(wa?'WhatsApp outreach':'Email outreach'),h);
+ let $=id=>document.getElementById(id);
+ $('obText').oninput=e=>{s.text=e.target.value};
+ if($('obSubject'))$('obSubject').oninput=e=>{s.subject=e.target.value};
+ if($('obObs'))$('obObs').oninput=e=>{s.obs=e.target.value};
+ if($('obChannel'))$('obChannel').onchange=e=>{s.channel=e.target.value;let m=buildMessage(l,s.channel,s.obs);s.subject=m.subject;s.text=m.body;s.approved=false;renderOutreach()};
+ if($('obRegen'))$('obRegen').onclick=()=>{let m=buildMessage(l,s.channel,s.obs);s.subject=m.subject;s.text=m.body;s.approved=false;renderOutreach()};
+ if($('obCopyMsg'))$('obCopyMsg').onclick=()=>copyText(s.text,'Message');
+ if($('obCopySub'))$('obCopySub').onclick=()=>copyText(s.subject,'Email subject');
+ if($('obCopyBody'))$('obCopyBody').onclick=()=>copyText(s.text,'Email body');
+ $('obApprove').onchange=e=>{s.approved=e.target.checked;$('obOpen').disabled=!(c.ok&&s.approved)};
+ $('obOpen').onclick=obOpen;
+}
+function obOpen(){
+ let s=OB.st,l=db.leads.find(x=>x.id===OB.leadId),c=contactInfo(l,s.channel),wa=s.channel==='WhatsApp';
+ if(!c.ok){toast(c.reason);return}
+ if(!s.approved){toast('Tick the approval box first');return}
+ if(!s.text.trim()){toast('The message is empty');return}
+ let d=s.draftId?db.drafts.find(x=>x.id===s.draftId):null;
+ if(!d){d={id:'dr-'+Date.now(),leadId:l.id,company:l.name,channel:s.channel,subject:'',text:'',status:'Needs review',date:new Date().toLocaleDateString(),outreach:{status:'Not sent',openedAt:null,openedVia:null}};db.drafts.unshift(d);s.draftId=d.id}
+ d.text=s.text.trim();if(!wa)d.subject=(s.subject||'').trim();
+ d.status='Approved';if(['New','Message Drafted'].includes(l.status))l.status='Approved';
+ d.outreach={...ob(d),openedAt:new Date().toISOString(),openedVia:s.channel};
+ let url=outreachUrl(s,c);
+ save();
+ launchUrl(url,wa);
+ if(!wa&&url.length>1900)toast('This email is long. If your email app opens empty, use the copy buttons instead.');
+ document.getElementById('obTrack').innerHTML=trackHtml();
+ document.getElementById('obTrack').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function obMark(status){if(!OB||!OB.st.draftId)return;setOutreach(OB.st.draftId,status);document.getElementById('obTrack').innerHTML=trackHtml()}
+function syncSubject(){let ch=document.querySelector('#messageForm [name=channel]');document.getElementById('subjectGroup').classList.toggle('hidden',!ch||ch.value!=='Email')}
+document.querySelector('#messageForm [name=channel]').addEventListener('change',syncSubject);syncSubject();
+
+/* ===== Universal industries, demo vs verified, research, discovery (backend-ready) ===== */
+const INDUSTRIES=['Hotels & Hospitality','Restaurants & Food Service','Schools & Education','Hospitals & Healthcare','Real Estate','Retail & E-commerce','Logistics & Transport','Manufacturing','Agriculture & Farming','Oil & Gas','Engineering & Construction','Professional Services','Marine & Maritime','Environmental Services','Industrial Safety','Other'];
+const PRESENCE=['Not researched','No website found','Website found, looks outdated','Website found, no enquiry or booking option','Website found, looks good','Social media only'];
+let SEARCH=null;
+function allIndustries(extra){let s=[...INDUSTRIES,...db.customIndustries];db.leads.forEach(l=>{if(l.industry&&!s.includes(l.industry))s.push(l.industry)});if(extra&&!s.includes(extra))s.push(extra);return s}
+function renderIndustrySelects(){
+ let f=document.getElementById('industryFilter'),p=document.getElementById('planIndustry'),o=allIndustries().map(x=>`<option>${esc(x)}</option>`).join('');
+ if(f){let v=f.value;f.innerHTML='<option value="">All industries</option>'+o;f.value=v}
+ if(p){let v=p.value;p.innerHTML='<option>All industries</option>'+o+'<option value="__custom">Other (type your own)…</option>';if(v)p.value=v;togglePlanCustom()}
+}
+function togglePlanCustom(){let p=document.getElementById('planIndustry'),c=document.getElementById('planCustom');if(p&&c)c.classList.toggle('hidden',p.value!=='__custom')}
+function wireLeadForm(){let s=document.getElementById('lfIndustry'),c=document.getElementById('lfCustom');if(!s)return;let t=()=>c.classList.toggle('hidden',s.value!=='__custom');s.onchange=t;t()}
+function leadKind(l){return l.origin==='demo'?'demo':l.verified?'verified':'unverified'}
+function typeBadge(l){return l.origin==='demo'?'<span class="badge demo">DEMO</span>':l.verified?'<span class="badge ver">VERIFIED</span>':'<span class="badge unv">UNVERIFIED</span>'}
+function verifyProblems(v,l){
+ if(l&&l.origin==='demo')return 'Demo records can’t be marked verified. Add a real company as a new lead.';
+ let miss=[];[['website','websiteSource','website'],['phone','phoneSource','phone number'],['email','emailSource','email']].forEach(a=>{if((v[a[0]]||'').trim()&&!(v[a[1]]||'').trim())miss.push(a[2])});
+ if(miss.length)return 'To verify, add a source for the '+miss.join(', ')+'.';
+ if(!['website','phone','email'].some(k=>(v[k]||'').trim()))return 'To verify, add at least one contact detail with its source.';
+ return '';
+}
+function prepLead(v,f,l){
+ if(v.industry==='__custom'){v.industry=(v.industryCustom||'').trim();if(!v.industry){toast('Type the industry name');return null}if(!allIndustries().includes(v.industry))db.customIndustries.push(v.industry)}
+ delete v.industryCustom;v.verified=f.has('verified');
+ if(v.verified){let p=verifyProblems(v,l);if(p){toast(p);return null}}
+ return v;
+}
+function needLine(ind){let i=(ind||'').toLowerCase(),m=[['hotel','online booking and enquiry options'],['restaurant','an online menu, reservations and order enquiries'],['school','admissions information and easy parent communication'],['hospital','appointment requests and clear patient information'],['health','appointment requests and clear patient information'],['real estate','property listings and enquiry forms'],['retail','a product catalogue and easy ways to order or enquire'],['logistic','quote requests and shipment enquiries'],['transport','quote requests and shipment enquiries'],['manufactur','a product catalogue and trade enquiries'],['agricultur','product listings and buyer enquiries'],['farm','product listings and buyer enquiries'],['construction','a project portfolio and a credible company profile'],['engineering','a project portfolio and a credible company profile'],['oil','a credible company profile and clear service information'],['marine','a credible company profile and clear service information'],['professional','a professional online presence that turns visitors into enquiries']].find(x=>i.includes(x[0]));return m?m[1]:'a clear online presence that helps customers find and contact them'}
+function composeObs(l,obs){
+ let line={'No website found':'When I searched for your business online, I couldn’t find an official website.','Website found, looks outdated':'I visited your website and noticed it may be due for a refresh.','Website found, no enquiry or booking option':'I visited your website and noticed there isn’t an easy way to enquire or book online.','Website found, looks good':'I visited your website and it presents the business well.','Social media only':'I found your business on social media but couldn’t find a dedicated website.'}[l.presence];
+ if(!line)return obs;
+ return line+' For '+(l.industry||'your').toLowerCase()+' businesses, '+needLine(l.industry)+' can make a real difference, so I thought it worth getting in touch.'+(obs?'\n\n'+obs:'');
+}
+function leadWarnings(l){
+ let h='';
+ if(!l.verified)h+='<div class="ob-box ob-warn"><b>Not verified</b>This lead isn’t marked verified yet. Double-check the contact details before you send anything.</div>';
+ if((l.presence||'Not researched')==='Not researched')h+='<div class="ob-box ob-warn"><b>Online presence not researched</b>This message is generic because nothing has been recorded about this business’s online presence. Edit the lead to record what you found.</div>';
+ return h;
+}
+document.getElementById('typeFilter').onchange=renderLeads;
+document.getElementById('planIndustry').onchange=togglePlanCustom;
+document.getElementById('removeDemo').onclick=()=>{let ids=db.leads.filter(l=>l.origin==='demo').map(l=>l.id);if(!ids.length){toast('No demo records to remove');return}if(confirm('Remove '+ids.length+' demo record(s)? Your own leads are not touched.')){db.leads=db.leads.filter(l=>l.origin!=='demo');db.drafts=db.drafts.filter(d=>!ids.includes(d.leadId));db.followups=db.followups.filter(f=>!ids.includes(f.leadId));save();toast('Demo records removed')}};
+/* ---- discovery (needs your own backend; see README) ---- */
+function renderDiscovery(){
+ let d=db.discovery,el=document.getElementById('discoveryPanel'),st=document.querySelector('.status');
+ if(st)st.textContent=d.ok?'● Discovery connected':'● Live discovery not connected';
+ let rs=document.getElementById('runSearch');if(rs)rs.disabled=!d.ok;
+ if(!el)return;
+ el.innerHTML=`<div class="notice"><b>${d.ok?'Backend reachable':'Live discovery is not connected'}</b>${d.ok?`“${esc(d.provider)}” answered the connection test on ${esc(new Date(d.testedAt).toLocaleString())}. This only proves the backend is reachable. Run one real search to confirm results. Everything found is UNVERIFIED until you check it.`:'This app has not searched anything. To find real businesses it needs your own secure backend (see README). It will never invent companies.'}${d.error?`<div style="margin-top:6px;color:var(--red)">${esc(d.error)}</div>`:''}</div><div class="panel" style="margin-bottom:18px"><div class="panel-head"><div><h2>Discovery backend</h2><p>Paste your backend’s address. Never paste an API key here.</p></div></div><div class="panel-body"><div class="form-grid"><div class="form-group span-2"><label>Backend URL</label><input id="dUrl" inputmode="url" placeholder="https://your-backend.vercel.app/api" value="${esc(d.url||'')}"></div><div class="form-group span-2"><label>Access code (a password you invent, set on your backend)</label><input id="dCode" type="password" autocomplete="off" value="${esc(d.code||'')}"></div></div><div class="form-actions"><button class="btn primary" type="button" id="dTest">Test connection</button></div></div></div>`;
+ document.getElementById('dTest').onclick=testBackend;
+}
+function bHeaders(extra){let h={Accept:'application/json',...extra};if(db.discovery.code)h['X-App-Token']=db.discovery.code;return h}
+async function testBackend(){
+ let u=document.getElementById('dUrl').value.trim().replace(/\/+$/,''),code=document.getElementById('dCode').value.trim();
+ if(!/^https:\/\/|^http:\/\/(localhost|127\.0\.0\.1)/.test(u)){toast('Use an https:// address (or http://localhost for testing).');return}
+ db.discovery={...db.discovery,url:u,code};toast('Testing connection…');
+ try{let r=await fetch(u+'/health',{headers:bHeaders()}),j=await r.json();if(!r.ok||j.ok!==true||!j.provider)throw new Error('The backend replied, but not with the expected answer.');db.discovery={url:u,code,ok:true,provider:String(j.provider).slice(0,60),testedAt:new Date().toISOString(),error:''}}
+ catch(e){db.discovery={url:u,code,ok:false,error:'Connection test failed: '+(e.message||'unknown error')+'. Check the address, the access code, and that your backend allows this site (CORS).'}}
+ save();
+}
+function cleanResult(x){
+ if(!x||typeof x.name!=='string'||!x.name.trim())return null;let t=(k,n)=>typeof x[k]==='string'?x[k].trim().slice(0,n||300):'',w=t('website',500);
+ return{name:t('name',200),address:t('address'),phone:t('phone',40),website:/^https?:\/\//i.test(w)?w:'',sourceName:t('sourceName',80),sourceUrl:/^https?:\/\//i.test(t('sourceUrl',500))?t('sourceUrl',500):'',placeId:t('placeId',200)};
+}
+async function runSearch(){
+ if(!db.discovery.ok){toast('Connect and test a backend first');return}
+ let p=Object.fromEntries(new FormData(document.getElementById('searchPlanForm')).entries()),ind=p.industry==='__custom'?(p.industryCustom||'').trim():p.industry,box=document.getElementById('searchResults');
+ if(!ind||!p.location){toast('Choose an industry and a location');return}
+ box.innerHTML='<div class="empty">Searching…</div>';
+ try{let r=await fetch(db.discovery.url+'/search',{method:'POST',headers:bHeaders({'Content-Type':'application/json'}),body:JSON.stringify({industry:ind,location:p.location,quantity:Number(p.quantity)||20,notes:p.notes||''})}),j=await r.json();
+  if(!r.ok||!Array.isArray(j.results))throw new Error(j.error||'Unexpected reply from the backend.');
+  SEARCH={provider:db.discovery.provider,industry:ind==='All industries'?'Other':ind,results:j.results.map(cleanResult).filter(Boolean)};renderResults()}
+ catch(e){box.innerHTML=`<div class="notice"><b>Search failed</b>${esc(e.message||'')}</div>`}
+}
+function renderResults(){
+ let box=document.getElementById('searchResults');if(!SEARCH)return;
+ let rows=SEARCH.results.map((r,i)=>{let have=db.leads.some(l=>(r.placeId&&l.placeId===r.placeId));return `<div style="padding:14px 18px;border-bottom:1px solid var(--line)"><b style="font-size:13px">${esc(r.name)}</b><span class="badge unv">UNVERIFIED</span><div class="sub">${esc(r.address||'No address returned')}</div><div class="sub">Phone: ${esc(r.phone||'none returned')} · Website: ${esc(r.website||'none returned')}</div><div class="sub">Source: ${esc(r.sourceName||SEARCH.provider)}${r.sourceUrl?` · <a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener noreferrer">open source</a>`:''}</div><div style="margin-top:8px"><button class="mini" ${have?'disabled':''} onclick="addResult(${i})">${have?'Already added':'Add as unverified lead'}</button></div></div>`}).join('');
+ box.innerHTML=`<div class="panel"><div class="panel-head"><div><h2>Search results (${SEARCH.results.length})</h2><p>Straight from “${esc(SEARCH.provider)}”. Not checked by you yet. Email addresses are not included; add one from the business’s own public pages and record the source.</p></div></div>${rows||'<div class="empty">The provider returned no results.</div>'}</div>`;
+}
+function addResult(i){
+ let r=SEARCH.results[i],src=(r.sourceName||SEARCH.provider)+', retrieved '+new Date().toLocaleDateString();
+ db.leads.unshift({id:'gp-'+Date.now(),name:r.name,industry:SEARCH.industry,location:r.address,phone:r.phone,email:'',website:r.website,phoneSource:r.phone?src:'',emailSource:'',websiteSource:r.website?src:'',presence:'Not researched',opportunity:'Needs research',priority:'Medium',status:'New',notes:'Imported from live search. Not yet verified.',created:new Date().toISOString(),nextAction:'',origin:'api',verified:false,placeId:r.placeId,discovery:{provider:SEARCH.provider,sourceUrl:r.sourceUrl,retrievedAt:new Date().toISOString()}});
+ save();toast('Added as an unverified lead');renderResults();
+}
+document.getElementById('runSearch').onclick=runSearch;
+
+renderAll();
+</script>
+</body>
+</html>
